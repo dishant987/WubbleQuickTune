@@ -2,7 +2,7 @@ import { Badge } from "../components/ui/badge";
 interface TrackInfoProps {
   title: string;
   description?: string;
-  duration?: number;
+  duration?: number ;
   mood: string;
   genre: string;
   moods: Array<{ id: string; name: string; emoji: string }>;
@@ -37,7 +37,7 @@ export function TrackInfo({
     <div>
       <div className="flex items-center justify-between">
         <h3 className="text-lg sm:text-xl font-bold truncate">{title}</h3>
-        {duration > 0 && (
+        {duration !== undefined && duration > 0 && (
           <span className="text-sm text-muted-foreground ml-2 flex-shrink-0">
             {formatDuration(duration)}
           </span>
